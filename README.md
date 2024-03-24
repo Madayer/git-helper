@@ -108,3 +108,5 @@ $ git remote -v
 $ git push -u origin main # Первый раз (вместо main может быть master)
 $ git push # Последующие разы
 ```
+## Статусы файлов в Git
+![](https://pictures.s3.yandex.net/resources/M2_T5_1686651284.png)
