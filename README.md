@@ -109,4 +109,18 @@ $ git push -u origin main # Первый раз (вместо main может б
 $ git push # Последующие разы
 ```
 ## Статусы файлов в Git
-![](https://pictures.s3.yandex.net/resources/M2_T5_1686651284.png)
+```mermaid
+graph LR;
+	untracked -- "git add" --> staged;
+	staged -- "git commit" --> tracked;
+	tracked -- "Изменения" --> modified;
+	staged -- "Изменения" --> modified;
+	modified -- "git add" --> staged;
+```
+## Файл `HEAD`
+Файл `HEAD` один из служебных файлов папки `.git`. Он указывает на коммит, который сделан последним.
+
+Внутри `HEAD` — ссылка на служебный файл: `refs/heads/master`. В файле, можно увидеть хеш последнего коммита.
+
+При коммите, Git обновляет `refs/heads/master` — записывает в него хеш последнего коммита. Получается, что `HEAD` тоже обновляется, так как ссылается на `refs/heads/master`.
+
